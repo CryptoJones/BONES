@@ -42,7 +42,8 @@ pip install -q \
     "pyyaml" \
     "requests" \
     "tqdm" \
-    "pypdf2"
+    "pypdf2" \
+    "rich"
 
 # Generate synthetic data and prepare dataset
 echo "[data] generating synthetic EMS scenarios..."
