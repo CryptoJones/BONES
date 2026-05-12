@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.env
+
+# Training outputs
+output/
+*.bin
+*.safetensors
+*.gguf
+
+# Data (raw and processed — can be large; regenerate from scripts)
+data/raw/*.jsonl
+data/raw/*.json
+data/raw/*.pdf
+data/processed/train.jsonl
+data/processed/eval.jsonl
+data/processed/dataset_stats.json
+data/synthetic/*.jsonl
+
+# Secrets
+*.key
+*.pem

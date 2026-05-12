@@ -1,0 +1,20 @@
+# BONES model configuration for inference
+
+baseline:
+  model: "meta-llama/Llama-3.1-8B-Instruct"
+  description: "Prompt-engineered baseline — no fine-tuning"
+
+production:
+  model: "meta-llama/Llama-3.3-70B-Instruct"
+  adapter: null  # set to adapter path after fine-tuning
+
+ollama:
+  model: "Ronin48/bones"
+  tags:
+    latest: "v0.1.0"
+
+inference:
+  temperature: 0.2
+  top_p: 0.9
+  max_new_tokens: 2048
+  repetition_penalty: 1.1
