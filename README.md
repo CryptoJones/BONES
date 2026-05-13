@@ -167,4 +167,4 @@ MIT License — see [LICENSE](LICENSE)
 
 ---
 
-Proudly Made in Nebraska. Go Big Red!
+Proudly Made in Nebraska. Go Big Red! 🌽
