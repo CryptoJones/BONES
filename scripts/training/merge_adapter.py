@@ -35,7 +35,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
         torch_dtype=torch.bfloat16,
-        device_map="auto",
+        device_map={"": 0},
         trust_remote_code=True,
     )
     tokenizer = AutoTokenizer.from_pretrained(base_model_name, trust_remote_code=True)
