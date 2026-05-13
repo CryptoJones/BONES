@@ -12,9 +12,8 @@ from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
     BitsAndBytesConfig,
-    TrainingArguments,
 )
-from trl import SFTTrainer
+from trl import SFTConfig, SFTTrainer
 
 
 def load_config(path: str) -> dict:
@@ -74,7 +73,8 @@ def main():
     eval_ds = load_dataset("json", data_files=dc["eval_file"], split="train") if dc.get("eval_file") else None
     print(f"Train: {len(train_ds)} | Eval: {len(eval_ds) if eval_ds else 0}")
 
-    training_args = TrainingArguments(
+    training_args = SFTConfig(
+        max_seq_length=dc.get("max_seq_length", 4096),
         output_dir=tc["output_dir"],
         num_train_epochs=tc["num_train_epochs"],
         per_device_train_batch_size=tc["per_device_train_batch_size"],
@@ -104,7 +104,6 @@ def main():
         args=training_args,
         train_dataset=train_ds,
         eval_dataset=eval_ds,
-        max_seq_length=dc.get("max_seq_length", 4096),
     )
 
     print("Starting BONES training...")
