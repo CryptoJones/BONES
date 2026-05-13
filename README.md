@@ -153,6 +153,14 @@ BONES, BRUNO, and SELMA are the three first responder models. They share scenes 
 
 ---
 
+## Training Notes
+
+If you're training BONES on RunPod or another GPU cloud provider, read [LESSONS_LEARNED.md](LESSONS_LEARNED.md)
+before you start. ABBY's file has the most complete record of first-run errors and fixes —
+BONES's file links there and will capture any BONES-specific issues as they arise.
+
+---
+
 ## License
 
 MIT License — see [LICENSE](LICENSE)
