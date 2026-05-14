@@ -1,5 +1,8 @@
 # BONES — Biomedical On-scene Navigator for Emergency Services
 
+> **Before deploying in an operational context, read [LIMITATIONS.md](LIMITATIONS.md).**
+
+
 > *"He's dead, Jim."* — Dr. Leonard H. McCoy, USS Enterprise
 
 **BONES** is an AI assistant fine-tuned on emergency medical services (EMS) protocols, pharmacology references, triage frameworks, and clinical decision support knowledge — built to assist **EMRs, EMTs, and Paramedics** in the field and in training.
